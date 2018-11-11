@@ -16,7 +16,7 @@ namespace CastleAffairsBot {
         private Dictionary<string, CommandBase> commandMap = new Dictionary<string, CommandBase>();
 
         public CommandManager() {
-            string file = $"{Environment.GetEnvironmentVariable("FILE_LOCATION")}/party";
+            string file = $"{Environment.GetEnvironmentVariable("FILE_LOCATION")}/party.json";
             if (File.Exists(file))
                 _party = JsonConvert.DeserializeObject<Items>(System.IO.File.ReadAllText(file));
             else {

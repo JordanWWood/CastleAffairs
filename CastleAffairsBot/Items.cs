@@ -30,7 +30,7 @@ namespace CastleAffairsBot {
         }
 
         public Items(ulong playerId) {
-            _path = $"{Environment.GetEnvironmentVariable("FILE_LOCATION")}/{playerId}";
+            _path = $"{Environment.GetEnvironmentVariable("FILE_LOCATION")}/{playerId}.json";
             if (!File.Exists(_path)) {
                 this.pp = 0;
                 this.gp = 0;

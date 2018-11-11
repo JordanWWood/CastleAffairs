@@ -2,10 +2,10 @@ using DSharpPlus.Entities;
 
 namespace CastleAffairsBot {
     public abstract class CommandBase {
-        public string name { get; set; }
-        public string[] alias { get; set; }
+        public string name { get; private set; }
+        public string[] alias { get; private set; }
         
-        public CommandBase(string name, string[] alias) {
+        protected CommandBase(string name, string[] alias) {
             this.name = name;
             this.alias = alias;
         }
